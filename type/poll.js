@@ -33,6 +33,17 @@ export class PollInfo {
         })
     }
 
+    async setDataAttr(place_info) {
+        console.log("place_id : ", place_info.place_id);
+
+        this.place_id = place_info.place_id;
+        this.name = place_info.name;
+        this.formatted_address = place_info.formatted_address;
+        this.lat = place_info.lat;
+        this.lng = place_info.lng;
+        this.photos = place_info.photos || [];
+    }
+
     isEmpty(){
         return this.place_id === "" ? true : false;
     }
