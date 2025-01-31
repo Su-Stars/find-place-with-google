@@ -16,13 +16,27 @@ export async function getExcelData () {
 
             return {
                 manage_number : record["manage_number"],
+                phone_number : record["phone_number"],
                 address_old : record["address_old"],
                 address_new : record["address_new"],
                 name : record["name"],
             }
         })
     )
-
+    /*
+    [
+        {
+            manage_number : string,
+            phone_number : string,
+            address_old : string,
+            address_new : string,
+            name : string,
+        },
+        ....
+        1000 개의 객체 배열 
+    ]
+    */
+    console.log("엑셀 데이터 추출 성공");
 
     return newTable;
 }
@@ -64,4 +78,4 @@ export async function writeExcelData(processedData) {
     }
 }
 
-getExcelData()
+getExcelData();

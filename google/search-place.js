@@ -1,6 +1,6 @@
 import axios from "axios";
 import { API_KEY } from "./constants.js";
-import { PollInfo } from "./type/poll.js";
+import { PollInfo } from "../type/poll.js";
 
 /*
 입력 레코드 예시 : 
@@ -188,6 +188,8 @@ export async function searchPlaceWithApi(address, companyName) {
 
         if(photos) {
             const photoArr = [];
+
+            console.log(photos);
 
             for(let i = 0; i < photos.length; i++) {
                 const photoUrl = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=1000&photoreference=${place.photos[i].photo_reference}&key=${KEY}`;

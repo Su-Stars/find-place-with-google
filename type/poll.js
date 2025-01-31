@@ -24,7 +24,7 @@ export class PollInfo {
         returnArr.push(this.place_id);
         returnArr.push(this.name);
         returnArr.push(this.formatted_address);
-        returnArr.push(this.lat);
+        returnsArr.push(this.lat);
         returnArr.push(this.lng);
 
         // 이미지 정보는 정해진 규격 없이 오른쪽으로 뻗어나갈 수 있게 만듬.
